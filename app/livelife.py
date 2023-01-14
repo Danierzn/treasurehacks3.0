@@ -254,9 +254,6 @@ frame.grid(row= 0, column= 0, sticky= "nesw")
 frame2.grid(row= 0, column= 0, sticky= "nesw")
 frame3.grid(row= 0, column= 0, sticky= "nesw")
 
-
-loadFrame()
-
-
+loadFrame() #Starts the app in the main menu
 #run app
 root.mainloop()
