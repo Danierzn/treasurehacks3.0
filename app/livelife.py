@@ -30,13 +30,13 @@ def loadFrame():
   frame.pack_propagate(False)
 
   #Making Image Widget (Mountain)
-  mountain = ImageTk.PhotoImage(file = "assets\mountain_fg.png")
+  mountain = ImageTk.PhotoImage(file = "assets/mountain_fg.png")
   mountain_widget = tk.Label(frame, image= mountain, bg= bgcolour)
   mountain_widget.image = mountain
   mountain_widget.place(x= 0, y= 400)
 
   #image widget (challenge accepted)
-  img = Image.open("assets\challenge_accepted.png")
+  img = Image.open("assets/challenge_accepted.png")
   realLogo = img.resize((200,200), Image.LANCZOS)
   logo = (ImageTk.PhotoImage(realLogo))
   logo_widget = tk.Label(frame, image= logo, bg= bgcolour)
@@ -79,7 +79,7 @@ def loadFrame2():
   frame2.pack_propagate(False)
   challenge = generate_challenge()
 
-  background = Image.open("assets\moon.jpg")
+  background = Image.open("assets/moon.jpg")
   reBackground = background.resize((650, 1000), Image.LANCZOS)
   bkg = ImageTk.PhotoImage(reBackground)
   bkg_widget = tk.Label(frame2, image= bkg)
