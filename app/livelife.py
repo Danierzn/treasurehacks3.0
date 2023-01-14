@@ -133,6 +133,8 @@ def loadFrame2():
   
 
 def loadFrame3(c):
+  global points
+  points +=1 #increment points for each challenge succeeded
   clear(frame2)
   frame3.tkraise()
   frame3.pack_propagate(False)
@@ -163,6 +165,15 @@ def loadFrame3(c):
     justify="center"
   )
   chalToday.pack()
+
+  pointGained = tk.Label(
+    frame3,
+    text= f"You now have {points} point(s)",
+    bg= bgcolour,
+    fg= "white",
+    font= ("Helvetica", 18)
+  )
+  pointGained.pack()
 
   backB = tk.Button(
     frame3,
