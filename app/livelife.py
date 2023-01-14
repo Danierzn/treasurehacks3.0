@@ -155,7 +155,6 @@ def loadFrame3(c):
 
   chalToday = tk.Label(
     frame3,
-    height= 10,
     text= c,
     bg= bgcolour,
     fg= "white",
