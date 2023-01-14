@@ -1,5 +1,7 @@
 import tkinter as tk
 import sqlite3
+import pickle
+from tkinter import filedialog
 from PIL import Image, ImageTk
 from numpy import random
 
@@ -188,21 +190,60 @@ def loadFrame3(c):
   )  
   backB.pack(pady= 20)
 
-#button
-#new_challenge_button = tk.Button(root, text="New Challenge", command=generate_challenge, font= "Helvetica")
-#new_challenge_button.pack()
+def save_list():
+  file_name = filedialog.asksaveasfilename(
+    initialdir= "C:/Users",
+    title = "Save Data",
+    filetypes= (("Dat Files","*.dat"), ("All Files", "*.*"))
+  )
+  if file_name:
+    if file_name.endswith(".dat"):
+      pass
+    else:
+      file_name = f'{file_name}.dat'
+  
+  output_file = open(file_name, 'wb')
+  pickle.dump(points, output_file)
 
-#label to display challenge
-#challenge_label = tk.Label(root, text="Challenge goes here", font=("Helvetica", 20))
-#challenge_label.pack()
+def open_list():
+  global points
+  file_name = filedialog.askopenfilename(
+    initialdir= "C:/Users",
+    title = "Open Data",
+    filetypes= (("Dat Files","*.dat"), ("All Files", "*.*"))
+  )
+  if file_name:
+    input_file = open(file_name,'rb')
+
+    points= pickle.load(input_file)
+  clear(frame)
+  loadFrame()
 
 
+def clear_list():
+  global points
+  points = 0
+  clear(frame)
+  loadFrame()
 
 #window
 root = tk.Tk()
 root.title("Live Your Life")
 root.eval("tk::PlaceWindow . center")
 
+#create menu
+my_menu = tk.Menu(root)
+root.config(menu= my_menu)
+
+#add items to menu
+file_menu = tk.Menu(my_menu, tearoff= False)
+my_menu.add_cascade(label="File", menu= file_menu)
+
+#Add dropdowns
+file_menu.add_command(label="Save List", command=save_list)
+file_menu.add_command(label="Open List", command=open_list)
+file_menu.add_separator() #puts seperator line
+file_menu.add_command(label="Clear List", command=clear_list)
 
 #Menu Frame
 frame = tk.Frame(root, width= 500, height= 700, bg= bgcolour)
