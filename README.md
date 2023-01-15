@@ -8,7 +8,7 @@
   Our app, Live Life With a Challenge, will be a simple, easy-to-use, executable that prompts the user a quote when user asks. There is a point system which racks up based on the amount of goals successfully finished every day. 
 
 # Installing
-  To install the executable, click here "INPUT LINK LATER". The source code for all of the elements is available on this repository.
+  To install the executable, click [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FDanierzn%2Ftreasurehacks3.0%2Ftree%2Fmain%2Fdist). The source code for all of the elements is available on this repository.
 
 # What we can add in the future
   - Save Button
