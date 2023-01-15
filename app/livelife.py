@@ -228,7 +228,7 @@ def clear_list():
 
 #window
 root = tk.Tk()
-root.title("Live Your Life")
+root.title("Live Life With a Challenge")
 root.eval("tk::PlaceWindow . center")
 
 #create menu
