@@ -10,7 +10,13 @@
 # Installing
 
   *ONLY COMPATIBLE WITH WINDOWS FOR NOW*
-  To install the executable, click [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FDanierzn%2Ftreasurehacks3.0%2Ftree%2Fmain%2Fdist). The source code for all of the elements is available on this repository. To navigate to the executable, extract all from the zip, and navigate into the livelife folder, and finally click on the livelife.exe to start your challenges.
+  To install the executable, click [here](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FDanierzn%2Ftreasurehacks3.0%2Ftree%2Fmain%2Fdist). The source code for all of the elements is available on this repository. To navigate to the executable, extract all from the zip, and navigate into the livelife folder, and finally click on the livelife.exe to start your challenges. If you have a Mac or Linux OS running on your device, the Python source code is in the app folder. We used the following libraries:
+  
+  - Tkinter (To download: in cmd prompt, pip install Tk)
+  - Pillow (To download: in cmd prompt, pip install Pillow)
+  - Numpy (To download: in cmd prompt, pip install numpy)
+  - Sqlite3 (Should already be installed with Python)
+  - Pickle (Should already be installed with Python)
 
 
 # What we can add in the future
